@@ -1,0 +1,17 @@
+cookie perser
+express
+cors
+ express rate-limit
+helmet 
+mongoose
+morgan
+nodemon 
+
+ Explanation of Packages:
+express: Web framework for Node.js.
+cookie-parser: Parses cookies attached to client requests.
+cors: Enables Cross-Origin Resource Sharing.
+express-rate-limit: Limits repeated requests to public APIs.
+helmet: Helps secure Express apps by setting HTTP headers.
+mongoose: MongoDB object modeling tool for Node.js.
+morgan: HTTP request logger middleware.

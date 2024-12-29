@@ -1,0 +1,4 @@
+1.Cors
+2.express
+3.multer
+4.nodemon
