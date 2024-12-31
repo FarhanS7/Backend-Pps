@@ -10,7 +10,7 @@ import {
   REQUEST_TIME,
   URL_ENCODE,
   WEB_CACHE,
-} from "./app/config/config.js";
+} from "./app/config/config.js"; // Import from config.js file in app/config folder   
 import router from "./routes/api.js";
 
 const app = express();
@@ -23,13 +23,13 @@ app.use(helmet());
 app.use(cookieParser());
 
 // App Use Limiter
-const limiter = rateLimit({ windowMs: REQUEST_TIME, max: REQUEST_NUMBER });
+const limiter = rateLimit({ windowMs: REQUEST_TIME, max: REQUEST_NUMBER }); // 20 minutes and 2000 requests limit 
 app.use(limiter);
 
 // Cache
-app.set("etag", WEB_CACHE);
+app.set("etag", WEB_CACHE); // false
 
-app.use("/api", router);
+app.use("/api", router); // Use router from routes/api.js
 
 app.listen(PORT, () => {
   console.log("Server started on port " + PORT);
